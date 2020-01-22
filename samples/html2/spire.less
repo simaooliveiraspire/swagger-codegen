@@ -1,0 +1,190 @@
+@font-face{
+	font-family:druk-web;
+	src:url(font/DrukWide-Medium.woff2) format("woff2"),
+	url(font/DrukWide-Medium.woff) format("woff");
+	font-style:normal;
+	font-weight:400;
+}
+@font-face{
+	font-family:kiro;
+	src:url(font/kiro.woff2) format("woff2"),
+	url(font/kiro.woff) format("woff");
+	font-style:normal;
+	font-weight:400;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+.container-fluid{
+	padding-left:0;
+}
+.sidenav{
+	padding:0;
+	background:black;
+	color:white;
+	&:before{
+		display: block;
+		content:'';
+		height: 80px;
+		widows: 100%;
+		background: url(img/spirelogo.svg) black no-repeat 10px 20px;
+		background-size:227px/2 84px/2;
+	}
+	*{
+		-webkit-touch-callout: none; /* iOS Safari */
+		  -webkit-user-select: none; /* Safari */
+		   -khtml-user-select: none; /* Konqueror HTML */
+		     -moz-user-select: none; /* Old versions of Firefox */
+		      -ms-user-select: none; /* Internet Explorer/Edge */
+		          user-select: none; /* Non-prefixed version, currently
+		                              supported by Chrome, Opera and Firefox */
+	}
+	&.nav-list{
+		>li>a, .nav-header{
+			text-shadow: none;
+			margin-left: 0;
+			margin-right: 0;
+			padding-top:.05em;
+			padding-bottom:.05em;
+		}
+	}
+	>li{
+		>a{
+			padding-top:0;
+			padding-bottom:0;
+			color:inherit;
+			width: 100%;
+			box-sizing: border-box;
+			border:0;
+			transition: all .2s;
+			border-top:1px solid #222;
+			font-family: 'kiro', sans-serif;
+			padding-left:10px;
+			&:hover{
+				border-left:2px solid white;
+				padding-left:15px;
+				background:rgba(255,255,255,.1);
+				color:rgba(255,255,255,.8);
+			}
+		}
+		&.nav-header{ 
+			padding:0;
+			> a{
+				padding:.05em 10px;
+				border:0;
+				font-family: 'druk-web';
+				width:100%;
+				background:transparent;
+				font-size:1.15em;
+				transition:opacity .3s;
+				&:hover{
+					opacity: .8;
+				}
+			}
+		}
+	}
+}
+
+body, p, a, div, th, td{
+	font-family: Roboto, sans-serif;
+}
+body{
+	background:#eeeeee;
+	color:black;
+	font-size:14px;
+}
+hr{
+	border-color:black;
+	border-top:0;
+}
+h1{
+	font-family:'druk-web', sans-serif;
+	text-transform: uppercase;
+	font-size:35px;
+	line-height: 40px;
+	margin-block-start: 0.67em;
+}
+h2{
+	font-family: 'kiro', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .1428571429rem;
+}
+section h1{
+	font-family:'druk-web', sans-serif;
+	text-transform: uppercase;
+	font-size:28px;
+	line-height: 36px;
+	margin-bottom: 5px;
+}
+article{
+	h1{
+		font-size:20px;
+		line-height: 22px;
+		font-family: 'kiro', sans-serif;
+		text-transform: none;
+	}
+	h2{
+		font-family: 'kiro', sans-serif;
+		letter-spacing: .1428571429rem;
+	}
+	h3{
+		font-family: 'kiro', sans-serif;
+	}
+}
+#header{
+	padding-bottom: 1rem;
+	h2{
+		margin-bottom: 5px;
+		border-top:1px solid black;
+		border-bottom:1px solid black;
+	}
+	.app-desc{
+		color:#666;
+		font-family: 'kiro', monospace;
+	}
+	hr{
+		display: none;
+	}
+}
+pre{
+	background:black;
+	code *{
+		font-family: 'Source Code Pro', monospace;
+	}
+}
+.json-schema-view, json-schema-view{
+	*{
+		font-family: 'Source Code Pro', monospace;
+	}
+}
+#sections{
+	>section{
+		&:first-child{
+			padding-top:0;
+		}
+		&:last-child{
+			padding-bottom:0;
+			hr:last-child{
+				display: none;
+			}
+		}
+	}
+}
+.row-fluid .span2{
+	width:228px;
+}
+#content{
+	margin-left:228px;
+	padding-top:0;
+	>*{
+		padding-left:25px;
+	}
+}
+
+#footer{
+	background:white;
+	padding-top:25px;
+	padding-bottom:25px;
+	margin-right: -20px;
+	*{
+			font-size:12px;
+	}
+}
